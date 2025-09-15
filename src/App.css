@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+/* ========== THEME VARIABLES ========== */
+@theme {
+  /* Fonts */
+  --font-barlow: "Barlow", sans-serif;
+  --font-jost: "Jost", sans-serif;
+
+  /* Colors */
+  --color-primary: #9fcb22;
+  --color-secondary: #ffffff;
+  --color-lightgray: #f4f6f5;
+  --color-gray: #b2b3b4;
+  --color-yellow: #fccc42;
+  --color-productBg: #f6fafb;
+  --color-lightgreen: #6ea68b;
+  --color-red: #d9485b;
+  --color-green: #14462e;
+  --color-text: #6c6c6c;
+  --color-darkblue: #252932;
+
+  /* Container */
+  --container-*: initial;
+  --container-max-width: 1170px;
+
+  /* Shadows */
+  --shadow-custom: 0px 2px 8px rgba(99, 99, 99, 0.2);
+
+  /* Typography */
+  --text-h1: 70px;
+
+  /* Breakpoints */
+  --breakpoint-3xl: 1920px;
+}
+
+/* ========== UTILITIES ========== */
+
+/* Custom container */
+@utility container {
+  max-width: 1140px;
+  margin-inline: auto; /* mx-auto */
+  padding-inline: 1rem; /* px-4 */
+}
+
+/* Headings */
+@utility h1 {
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 75px;
+  font-family: var(--font-jost);
+}
+
+/* Anchor */
+@utility a {
+  font-family: var(--font-barlow);
+}
+
+/* Custom shadow */
+@utility shadow-custom {
+  box-shadow: var(--shadow-custom);
+}
+
+/* ========== BASE STYLES ========== */
+@layer base {
+  p {
+    @apply text-text;
+  }
+  h1 {
+    @apply lg:text-[45px] text-[70px] font-bold font-jost leading-[75px];
+  }
+  h2 {
+    @apply lg:text-[45px] text-[26px] font-bold font-jost leading-[51px];
+  }
+  h4 {
+    @apply text-[22px] lg:text-[26px] leading-[35px] font-semibold font-jost;
+  }
+  h5 {
+    @apply text-[22px] leading-[30px] font-jost font-semibold;
+  }
+  h6 {
+    @apply text-[23px] leading-[28px] font-jost font-medium;
+  }
+}
