@@ -12,7 +12,7 @@
   --color-secondary: #ffffff;
   --color-lightgray: #f4f6f5;
   --color-gray: #b2b3b4;
-  --color-yellow: #fccc42;
+  --color-yellow: #fffc01;
   --color-productBg: #f6fafb;
   --color-lightgreen: #6ea68b;
   --color-red: #d9485b;
@@ -71,6 +71,9 @@
   }
   h2 {
     @apply lg:text-[45px] text-[26px] font-bold font-jost leading-[51px];
+  }
+  h3 {
+    @apply lg:text-[45px] text-[28px]   font-jost leading-[37px];
   }
   h4 {
     @apply text-[22px] lg:text-[26px] leading-[35px] font-semibold font-jost;

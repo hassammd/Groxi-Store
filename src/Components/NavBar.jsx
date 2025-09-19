@@ -13,7 +13,7 @@ import { useState } from "react";
 const NavBar = () => {
   const NavItems = ["Home", "About", "Shop", "Blog", "Contact"];
   const NavIcons = [faMagnifyingGlass, faUser, faHeart, faCartShopping];
-  const [isActive, setIsActive] = useState(true);
+  const [isActive, setIsActive] = useState(false);
 
   const mobileNavHandler = () => {
     setIsActive(!isActive);
