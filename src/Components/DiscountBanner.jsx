@@ -13,8 +13,8 @@ const DiscountBanner = () => {
                 <span className="text-[var(--color-yellow)] italic">50%</span>
                 <span className=" text-[var(--color-secondary)]">Off</span>
               </div>
-              <div>
-                <span className="cursor-pointer uppercase lg:text-[21px] sm:text-[14px]  font-normal text-[var(--color-secondary)] hover:text-[var(--color-green)]">
+              <div className="group">
+                <span className="cursor-pointer uppercase lg:text-[21px] sm:text-[14px]  font-normal text-[var(--color-secondary)] group-hover:text-[var(--color-green)] ">
                   Shop Now
                 </span>
                 <FontAwesomeIcon

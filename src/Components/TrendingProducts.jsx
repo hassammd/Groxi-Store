@@ -68,19 +68,21 @@ const TrendingProducts = () => {
             </span>
             <h2 className="lg:mb-[42px]">Trending Products</h2>
           </div>
-          <div className="flex flex-wrap gap-[30px] justify-center">
-            {Products.map((items) => {
-              return (
-                <ProductsCard
-                  title={items.title}
-                  oldPrice={items.oldPrice}
-                  newPrice={items.newPrice}
-                  productImg={items.productImg}
-                  rating={items.rating}
-                  hot={items.hot}
-                />
-              );
-            })}
+          <div className="flex items-center justify-center">
+            <div className="flex  flex-wrap w-[80%]  sm:w-full gap-[30px] justify-center">
+              {Products.map((items) => {
+                return (
+                  <ProductsCard
+                    title={items.title}
+                    oldPrice={items.oldPrice}
+                    newPrice={items.newPrice}
+                    productImg={items.productImg}
+                    rating={items.rating}
+                    hot={items.hot}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>

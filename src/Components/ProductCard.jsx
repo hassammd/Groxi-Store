@@ -12,7 +12,7 @@ const ProductsCard = ({
 }) => {
   return (
     <>
-      <div className="  md:w-[30%] lg:w-[31.5%] sm:w-[40%]  border border-transparent hover:border hover:border-[var(--color-primary)] md:py-[45px] md:px-[50px] py-[35px] px-[25px] bg-[var(--color-productBg)] flex flex-col items-center justify-center relative group">
+      <div className=" w-full md:w-[33%] lg:w-[31.5%] sm:w-[40%]  border border-transparent hover:border hover:border-[var(--color-primary)] md:py-[45px] md:px-[50px] py-[35px] px-[25px] bg-[var(--color-productBg)] flex flex-col items-center justify-center relative group">
         {hot ? (
           <span className="lg:text-[15px]  py-[1px]  px-[13px] bg-red absolute top-0 left-0 text-[var(--color-secondary)]">
             Hot
@@ -31,7 +31,7 @@ const ProductsCard = ({
           <img src={productImg} alt="" />
         </figure>
 
-        <figure className=" mb-[8px] text-[14px]">
+        <figure className=" mb-[8px] text-[14px] mt-auto">
           {[...Array(5)].map((items, index) => {
             return index < rating ? (
               <FontAwesomeIcon
