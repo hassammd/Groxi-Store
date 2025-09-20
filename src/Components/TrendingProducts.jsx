@@ -15,6 +15,7 @@ const TrendingProducts = () => {
       productImg: trendhome1,
       rating: 4,
       hot: true,
+      bgColor: "var(--color-productBg)",
     },
     {
       title: "Broccoli",
@@ -23,6 +24,7 @@ const TrendingProducts = () => {
       productImg: trendhome2,
       rating: 3,
       hot: false,
+      bgColor: "var(--color-productBg)",
     },
     {
       title: "Strawberries",
@@ -31,6 +33,7 @@ const TrendingProducts = () => {
       productImg: trendhome3,
       rating: 1,
       hot: true,
+      bgColor: "var(--color-productBg)",
     },
     {
       title: "Fresh Honey",
@@ -39,6 +42,7 @@ const TrendingProducts = () => {
       productImg: trendhome4,
       rating: 1,
       hot: true,
+      bgColor: "var(--color-productBg)",
     },
     {
       title: "Fresh Milk",
@@ -47,6 +51,7 @@ const TrendingProducts = () => {
       productImg: trendhome5,
       rating: 3,
       hot: true,
+      bgColor: "var(--color-productBg)",
     },
     {
       title: "Mango Beverage",
@@ -55,6 +60,7 @@ const TrendingProducts = () => {
       productImg: trendhome6,
       rating: 3,
       hot: true,
+      bgColor: "var(--color-productBg)",
     },
   ];
 
@@ -79,6 +85,7 @@ const TrendingProducts = () => {
                     productImg={items.productImg}
                     rating={items.rating}
                     hot={items.hot}
+                    bgColor={items.bgColor}
                   />
                 );
               })}

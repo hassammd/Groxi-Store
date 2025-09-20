@@ -9,10 +9,20 @@ const ProductsCard = ({
   oldPrice,
   title,
   rating,
+  bgColor,
 }) => {
   return (
     <>
-      <div className=" w-full md:w-[33%] lg:w-[31.5%] sm:w-[40%]  border border-transparent hover:border hover:border-[var(--color-primary)] md:py-[45px] md:px-[50px] py-[35px] px-[25px] bg-[var(--color-productBg)] flex flex-col items-center justify-center relative group">
+      <div
+        className="
+      w-full md:w-[33%] lg:w-[31.5%] sm:w-[40%]
+      border border-transparent hover:border
+      hover:border-[var(--color-primary)] 
+      md:py-[45px] md:px-[50px] py-[35px] px-[25px]
+      flex flex-col items-center
+       justify-center relative group"
+        style={{ backgroundColor: bgColor }}
+      >
         {hot ? (
           <span className="lg:text-[15px]  py-[1px]  px-[13px] bg-red absolute top-0 left-0 text-[var(--color-secondary)]">
             Hot

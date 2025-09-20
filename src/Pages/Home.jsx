@@ -1,6 +1,7 @@
 import AboutSection from "../Components/AboutSection";
 import Catagories from "../Components/Catagories";
 import DiscountBanner from "../Components/DiscountBanner";
+import FeaturedProducts from "../Components/FeaturedProducts";
 import FeatureSection from "../Components/FeaturesSection";
 import Header from "../Components/Header";
 import NavBar from "../Components/NavBar";
@@ -15,6 +16,7 @@ const Home = () => {
       <DiscountBanner />
       <AboutSection />
       <FeatureSection />
+      <FeaturedProducts />
     </>
   );
 };
