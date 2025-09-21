@@ -5,6 +5,7 @@ import FeaturedProducts from "../Components/FeaturedProducts";
 import FeatureSection from "../Components/FeaturesSection";
 import Header from "../Components/Header";
 import NavBar from "../Components/NavBar";
+import Testimonials from "../Components/Testimonials";
 import TrendingProducts from "../Components/TrendingProducts";
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
       <AboutSection />
       <FeatureSection />
       <FeaturedProducts />
+      <Testimonials />
     </>
   );
 };
