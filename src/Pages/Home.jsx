@@ -3,6 +3,7 @@ import Catagories from "../Components/Catagories";
 import DiscountBanner from "../Components/DiscountBanner";
 import FeaturedProducts from "../Components/FeaturedProducts";
 import FeatureSection from "../Components/FeaturesSection";
+import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import NavBar from "../Components/NavBar";
 import Testimonials from "../Components/Testimonials";
@@ -19,6 +20,7 @@ const Home = () => {
       <FeatureSection />
       <FeaturedProducts />
       <Testimonials />
+      <Footer />
     </>
   );
 };
