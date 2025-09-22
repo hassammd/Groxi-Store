@@ -3,6 +3,7 @@
 @import "tailwindcss";
 
 /* ========== THEME VARIABLES ========== */
+
 @theme {
   /* Fonts */
   --font-barlow: "Barlow", sans-serif;
@@ -65,7 +66,7 @@
 /* ========== BASE STYLES ========== */
 @layer base {
   p {
-    @apply text-text;
+    @apply text-[var(--color-text)];
   }
   h1 {
     @apply lg:text-[45px] text-[70px] font-bold font-jost leading-[75px];
