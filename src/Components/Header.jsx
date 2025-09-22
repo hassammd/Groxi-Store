@@ -1,12 +1,9 @@
-import NavBar from "./NavBar";
 import bannerImg from "../assets/banner-img.png";
 
 const Header = () => {
   return (
     <>
       <section className="bg-[var(--color-lightgray)] h-auto lg:h-[926px] relative">
-        <NavBar />
-
         {/* Banner section */}
         <div>
           <div className="container">

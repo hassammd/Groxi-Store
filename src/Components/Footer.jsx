@@ -11,20 +11,93 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
-  const brnads = [
+  // brands logo array
+  const brands = [newslogo1, newslogo2, newslogo3, newslogo4];
+  // footer section array
+  const footerSection = [
     {
-      logo: newslogo1,
+      title: "Store Location",
+      items: [
+        {
+          label: "Address:",
+          value: "121 King Street Melbourne,3000,Australia",
+        },
+        {
+          label: "Email:",
+          value: "info@groxistore.com",
+        },
+        {
+          label: "Phone:",
+          value: "+1 23 45 6789",
+        },
+      ],
     },
     {
-      logo: newslogo2,
+      title: "Useful Links",
+      items: [
+        {
+          value: "About Us",
+        },
+        {
+          value: "Blog",
+        },
+        {
+          value: "Check out",
+        },
+        {
+          value: "Contact",
+        },
+        {
+          value: "Service",
+        },
+        {
+          value: "Shop",
+        },
+      ],
+    },
+
+    {
+      title: "Categories",
+      items: [
+        {
+          value: "Fruits & Vegetables",
+        },
+        {
+          value: "Dairy Products",
+        },
+        {
+          value: "Package Foods",
+        },
+        {
+          value: "Beverage",
+        },
+        {
+          value: "Health & Wellness",
+        },
+        {
+          value: "Meat Varieties",
+        },
+      ],
     },
     {
-      logo: newslogo3,
-    },
-    {
-      logo: newslogo4,
+      title: "Opening Hours",
+      items: [
+        {
+          label: "Monday – Saturday",
+          value: "12.00 – 14.45",
+        },
+        {
+          label: "Sunday – Thursday",
+          value: "17.30 – 00.00",
+        },
+        {
+          label: "Friday – Saturday",
+          value: "17.30 – 00.00",
+        },
+      ],
     },
   ];
+
   return (
     <>
       {/* logo section */}
@@ -32,13 +105,13 @@ const Footer = () => {
       <section className="logo_section lg:py-[100px] py-[90px] md:pb-[100px] lg:pb-[200px] ">
         <div className="container">
           <ul className="flex gap-8 lg:gap-16px items-center justify-center md:justify-end">
-            {brnads.map((items) => {
+            {brands.map((items) => {
               return (
                 <li>
                   <img
-                    src={items.logo}
+                    src={items}
                     alt=""
-                    className="w-[100px] lg:w-auto"
+                    className="w-[100px] lg:w-auto opacity-20 hover:opacity-100 duration-1000"
                   />
                 </li>
               );
@@ -83,107 +156,44 @@ const Footer = () => {
           </div>
 
           {/* footer bottom */}
-          <div className="flex flex-wrap gap-4 mb-[90px] ">
-            <div className="lg:w-3/12 w-6/12 ">
-              <span className="text-secondary lg:text-[23px] text-[20px]  font-semibold block mb-[15px]">
-                Store Location
-              </span>
-              <ul className="text-[var(--color-lightgreen)] lg:text-[18px] text-[14px] flex flex-col gap-[10px] ">
-                <li>
-                  <span>Address:</span>
-                  <p className="text-[var(--color-lightgreen)]">
-                    121 King Street Melbourne,3000, Australia
-                  </p>
-                </li>
-                <li>
-                  <span>Email:</span>
-                  <p className="text-[var(--color-lightgreen)]">
-                    info@groxistore.com
-                  </p>
-                </li>
-                <li>
-                  <span>Phone:</span>
-                  <p className="text-[var(--color-lightgreen)]">
-                    +1 23 45 6789
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div className="lg:w-3/12 w-5/12">
-              <span className="text-secondary lg:text-[23px] text-[20px]  font-semibold block mb-[15px]">
-                Useful Links
-              </span>
-              <ul className="text-[var(--color-lightgreen)] lg:text-[18px] text-[14px]  flex flex-col gap-[10px] ">
-                <li>
-                  <span>About Us</span>
-                </li>
-                <li>
-                  <span>Blog</span>
-                </li>
-                <li>
-                  <span>Check out</span>
-                </li>
-                <li>
-                  <span>Contact</span>
-                </li>
-                <li>
-                  <span>Service</span>
-                </li>
-                <li>
-                  <span>Shop</span>
-                </li>
-              </ul>
-            </div>
-            <div className="lg:w-3/12 w-6/12">
-              <span className="text-secondary lg:text-[23px] text-[20px] font-semibold block mb-[15px] ">
-                Categories
-              </span>
-              <ul className="text-[var(--color-lightgreen)] lg:text-[18px] text-[14px] flex flex-col gap-[10px] ">
-                <li>
-                  <span>Fruits & Vegetables</span>
-                </li>
-                <li>
-                  <span>Dairy Products</span>
-                </li>
-                <li>
-                  <span>Package Foods</span>
-                </li>
-                <li>
-                  <span>Beverage</span>
-                </li>
-                <li>
-                  <span>Health & Wellness</span>
-                </li>
-                <li>
-                  <span>Meat Varieties</span>
-                </li>
-              </ul>
-            </div>
-            <div className="lg:w-2/12 w-5/12">
-              <span className="text-secondary lg:text-[23px] text-[20px] font-semibold block mb-[15px]">
-                Opening Hours
-              </span>
-              <ul className="text-[var(--color-lightgreen)] lg:text-[18px] text-[14px] flex flex-col gap-[10px] ">
-                <li>
-                  <span>Monday – Saturday</span>
-                  <p className="text-[var(--color-lightgreen)]">
-                    12.00 – 14.45
-                  </p>
-                </li>
-                <li>
-                  <span>Sunday – Thursday</span>
-                  <p className="text-[var(--color-lightgreen)]">
-                    17.30 – 00.00
-                  </p>
-                </li>
-                <li>
-                  <span>Friday – Saturday</span>
-                  <p className="text-[var(--color-lightgreen)]">
-                    17.30 – 00.00
-                  </p>
-                </li>
-              </ul>
-            </div>
+          <div className="flex flex-wrap justify-between gap-4 mb-[90px] ">
+            {footerSection.map((section, index) => {
+              return (
+                <>
+                  <div className="md:w-[23%] lg:w-[15%]  w-[40%] ">
+                    <span className="text-secondary lg:text-[23px] text-[20px]  font-semibold block mb-[15px]">
+                      {section.title}
+                    </span>
+                    <ul className="text-[var(--color-lightgreen)] lg:text-[18px] text-[14px] flex flex-col gap-[10px] ">
+                      {section.items.map((items) => {
+                        return (
+                          <>
+                            <li>
+                              <span className="">{items.label}</span>
+                              <p className=" text-[16px] text-[var(--color-lightgreen)]">
+                                {items.value}
+                              </p>
+                            </li>
+                          </>
+                        );
+                      })}
+                      {/* <li>
+                        <span>Email:</span>
+                        <p className="text-[var(--color-lightgreen)]">
+                          info@groxistore.com
+                        </p>
+                      </li> */}
+                      {/* <li>
+                        <span>Phone:</span>
+                        <p className="text-[var(--color-lightgreen)]">
+                          +1 23 45 6789
+                        </p>
+                      </li> */}
+                    </ul>
+                  </div>
+                </>
+              );
+            })}
           </div>
         </div>
         <div>
