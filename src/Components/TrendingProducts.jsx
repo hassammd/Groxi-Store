@@ -75,7 +75,7 @@ const TrendingProducts = () => {
             <h2 className="lg:mb-[42px]">Trending Products</h2>
           </div>
           <div className="flex items-center justify-center">
-            <div className="flex  flex-wrap w-[80%]  sm:w-full gap-[30px] justify-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
               {Products.map((items) => {
                 return (
                   <ProductsCard

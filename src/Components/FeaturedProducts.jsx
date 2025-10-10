@@ -148,20 +148,22 @@ const FeaturedProducts = () => {
               })}
             </ul>
           </div>
-          <div className=" flex flex-wrap justify-center gap-[30px]">
-            {featuredProducts.slice(0, 6).map((items) => {
-              return (
-                <ProductsCard
-                  title={items.title}
-                  oldPrice={items.oldPrice}
-                  newPrice={items.newPrice}
-                  productImg={items.productImg}
-                  rating={items.rating}
-                  catagory={items.catagory}
-                  bgColor={items.bgColor}
-                />
-              );
-            })}
+          <div className="flex items-center justify-center">
+            <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+              {featuredProducts.slice(0, 6).map((items) => {
+                return (
+                  <ProductsCard
+                    title={items.title}
+                    oldPrice={items.oldPrice}
+                    newPrice={items.newPrice}
+                    productImg={items.productImg}
+                    rating={items.rating}
+                    catagory={items.catagory}
+                    bgColor={items.bgColor}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>

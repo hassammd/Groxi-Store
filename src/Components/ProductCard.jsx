@@ -9,19 +9,26 @@ const ProductsCard = ({
   oldPrice,
   title,
   rating,
-  bgColor,
+
+  varient,
 }) => {
+  const varientClass = {
+    shop: {
+      wrapper: "bg-[var(--color-productBg)]",
+      heading: "leading-[21px] text-center text-[20px]",
+    },
+    home: {
+      wrapper: "bg-[var(--color-secondary)] ",
+    },
+  };
   return (
     <>
       <div
-        className="
-      w-full md:w-[33%] lg:w-[31.5%] sm:w-[40%]
-      border border-transparent hover:border
+        className={` border border-transparent hover:border
       hover:border-[var(--color-primary)] 
       md:py-[45px] md:px-[50px] py-[35px] px-[25px]
       flex flex-col items-center
-       justify-center relative group"
-        style={{ backgroundColor: bgColor }}
+       justify-center relative group   ${varientClass[varient]?.wrapper}`}
       >
         {hot ? (
           <span className="lg:text-[15px]  py-[1px]  px-[13px] bg-red absolute top-0 left-0 text-[var(--color-secondary)]">
@@ -45,6 +52,7 @@ const ProductsCard = ({
           {[...Array(5)].map((items, index) => {
             return index < rating ? (
               <FontAwesomeIcon
+                key={index}
                 icon={faStar}
                 className="text-[var(--color-yellow)]"
               />
@@ -57,7 +65,9 @@ const ProductsCard = ({
           })}
         </figure>
 
-        <h4 className="lg:mb-[14px]">{title}</h4>
+        <h4 className={`lg:mb-[14px] ${varientClass[varient]?.heading}`}>
+          {title}{" "}
+        </h4>
         <div className="flex gap-1 lg:mb-[23px] mb-[15px] ">
           <span className="font-semibold text-[var(--color-gray)] lg:text-[23px]">
             ${oldPrice}

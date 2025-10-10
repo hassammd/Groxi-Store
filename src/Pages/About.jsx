@@ -2,7 +2,18 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import BannerBox from "../Components/BannerBox";
 import aboutBannerImage from "../assets/about-us-banner-img.png";
 import Aboutimage from "../assets/Aboutimage.png";
-
+import TestimonialCard from "../Components/TestimonialCard";
+import vision from "../assets/vision.png";
+import goal from "../assets/goal.png";
+import quality from "../assets/quality.png";
+import basket from "../assets/basket.png";
+import Delivery from "../assets/delivery.png";
+import onlineorder from "../assets/online-order.png";
+import services from "../assets/24service.png";
+import FeatureSection from "../Components/FeaturesSection";
+import aboutcenter from "../assets/aboutcenter.png";
+import Testimonials from "../Components/Testimonials";
+import Footer from "../Components/Footer";
 const About = () => {
   const breadcrumbs = [
     {
@@ -14,6 +25,55 @@ const About = () => {
     },
     {
       name: "About",
+    },
+  ];
+
+  //visions and goal
+
+  const visions = [
+    {
+      goal: "Our Vision",
+      content:
+        "Neque porro quisquam est aui dolorem iesum ruia sit amet, consectetur, adipisci velit, sed quia non eius modi tempora incidunt ut labore et dolore ma volutatem exercitationem ullam.",
+      icon: vision,
+      color: "var(--color-secondary)",
+    },
+    {
+      goal: "Our Goal",
+      content:
+        "Neque porro quisquam est aui dolorem iesum ruia sit amet, consectetur, adipisci velit, sed quia non eius modi tempora incidunt ut labore et dolore ma volutatem exercitationem ullam.",
+      icon: goal,
+      color: "var(--color-secondary)",
+    },
+  ];
+  //why us array
+  const whyUs = [
+    {
+      title: "Quality Products",
+      content:
+        "Aui dolorem iesum ruia dolor sit amet, consectetur, adipisci eius modi incidunt",
+      img: quality,
+    },
+    {
+      title: "Fast Delivery",
+      content:
+        "Aui dolorem iesum ruia dolor sit amet, consectetur, adipisci eius modi incidunt",
+      img: Delivery,
+    },
+    {
+      img: aboutcenter,
+    },
+    {
+      title: "Online Order",
+      content:
+        "Aui dolorem iesum ruia dolor sit amet, consectetur, adipisci eius modi incidunt",
+      img: onlineorder,
+    },
+    {
+      title: "24/7 Service",
+      content:
+        "Aui dolorem iesum ruia dolor sit amet, consectetur, adipisci eius modi incidunt",
+      img: services,
     },
   ];
   return (
@@ -33,14 +93,14 @@ const About = () => {
 
       {/* about us section */}
 
-      <section className="py-[70px] sm:py-[90px] md:py-[100px] lg:py-[100px] relative">
+      <section className="py-[70px] sm:py-[90px] md:py-[100px] lg:py-[100px] ">
         <div className="container">
-          <div className="flex flex-wrap flex-col-reverse lg:flex-row-reverse gap-6">
+          <div className="flex  flex-col-reverse lg:flex-row gap-6 relative">
             <div className="lg:w-6/12 w-full px-[50px]">
               <img
                 src={Aboutimage}
                 alt=""
-                className="lg:absolute lg:bottom-0 lg:left-[18px] md:w-[500px] mx-auto xl:w-[600px] 2xl:w-auto lg:top-[110px] xl:top-[160px]  2xl:left-[118px]"
+                className="lg:absolute lg:bottom-0 lg:left-0 md:w-[500px] mx-auto xl:w-[600px] 2xl:w-auto lg:top-[-10px] xl:top-[38px] xl:left-[-40px] 2xl:top-[-80px]  2xl:left-[-260px]"
               />
             </div>
             <div className="lg:w-6/12 w-full lg:pl-[42px] lg:pr-[30px] xl:pt-[90px] px-[20px] 2xl:px-0 ">
@@ -64,6 +124,33 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* our visions and goal section */}
+
+      <section className="bg-[var(--color-productBg)] py-[70px] sm:py-[90px] md:py-[100px] lg:py-[100px]">
+        <div className="container">
+          <div className="flex flex-wrap justify-center gap-[30px]">
+            {visions.map((items) => {
+              return (
+                <TestimonialCard
+                  goal={items.goal}
+                  content={items.content}
+                  icon={items.icon}
+                  color={items.color}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <FeatureSection whyUs={whyUs} />
+        </div>
+      </section>
+
+      {/* footer section */}
     </>
   );
 };

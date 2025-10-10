@@ -160,15 +160,15 @@ const Footer = () => {
             {footerSection.map((section, index) => {
               return (
                 <>
-                  <div className="md:w-[23%] lg:w-[15%]  w-[40%] ">
+                  <div key={index} className="md:w-[23%] lg:w-[15%]  w-[40%] ">
                     <span className="text-secondary lg:text-[23px] text-[20px]  font-semibold block mb-[15px]">
                       {section.title}
                     </span>
                     <ul className="text-[var(--color-lightgreen)] lg:text-[18px] text-[14px] flex flex-col gap-[10px] ">
-                      {section.items.map((items) => {
+                      {section.items.map((items, index) => {
                         return (
                           <>
-                            <li>
+                            <li key={index}>
                               <span className="">{items.label}</span>
                               <p className=" text-[16px] text-[var(--color-lightgreen)]">
                                 {items.value}

@@ -7,6 +7,7 @@ import About from "./Pages/About";
 import { Outlet, Route, Routes } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Layout from "./Components/Layout";
+import Shop from "./Pages/Shop";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/shop" element={<Shop />} />
         </Route>
       </Routes>
     </>

@@ -1,14 +1,15 @@
 import TestimonialCard from "./TestimonialCard";
+import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Testimonials = () => {
   const CustomersSayings = [
     {
       name: "Alina Parker",
       status: "Ceo, GTD",
-
       content:
         "”Quisquam est, qui dolorem ipsum quia dolor sit consectetur adipisci velit sed quia non numqua eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem repudia sint et molestiae”",
       rating: 3,
+      icon: faQuoteLeft,
     },
     {
       name: "Kevin Andrew",
@@ -17,6 +18,7 @@ const Testimonials = () => {
       content:
         "”Exercitationem ullam corporis suscipit laborio nisi ut aliquid ex ea commodi consequatur uis autem vel eum iure reprehenderit qui in ea vou velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat”",
       rating: 5,
+      icon: faQuoteLeft,
     },
   ];
 
@@ -41,6 +43,7 @@ const Testimonials = () => {
                   name={items.name}
                   rating={items.rating}
                   status={items.status}
+                  icon={items.icon}
                 />
               );
             })}

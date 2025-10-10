@@ -75,7 +75,7 @@
     @apply lg:text-[45px] text-[26px] font-bold font-jost leading-[51px];
   }
   h3 {
-    @apply lg:text-[45px] text-[28px]   font-jost leading-[37px];
+    @apply lg:text-[38px] text-[28px] lg:leading-[51px] font-semibold  font-jost leading-[37px];
   }
   h4 {
     @apply text-[22px] lg:text-[26px] leading-[35px] font-semibold font-jost;
